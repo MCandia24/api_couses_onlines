@@ -1,13 +1,24 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+// src/app/app.component.ts
+
+import { CommonModule } from "@angular/common";
+import { HttpClientModule } from "@angular/common/http";
+import { Component } from "@angular/core";
+import { HomeRoutingModule } from "./modules/home/home-routing.module";
+
 
 @Component({
   selector: 'app-root',
+  //declarations: [AppComponent],
   standalone: true,
-  imports: [RouterOutlet],
+ 
+  imports: [
+   CommonModule, HomeRoutingModule, HttpClientModule,
+  ],
+
+  
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
   title = 'courses_onlines';
-}
+  }
